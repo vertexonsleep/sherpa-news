@@ -1,0 +1,13 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#0a0a0a;color:white;display:flex;justify-content:center;align-items:center;min-height:100vh}
+.container{width:95%;max-width:700px;padding:30px;background:#121212;border-radius:20px}
+h1{text-align:center;margin-bottom:5px}
+.subtitle{text-align:center;opacity:.7;margin-bottom:30px}
+.upload-box{display:block;padding:30px;border:2px dashed #666;text-align:center;cursor:pointer;border-radius:15px}
+.upload-box input{display:none}
+video{width:100%;margin-top:20px;border-radius:12px}
+#info{margin-top:20px;line-height:1.8}
+button{width:100%;margin-top:20px;padding:15px;border:none;background:#fff;color:#000;font-weight:bold;cursor:pointer;border-radius:12px}
+.progress-wrap{margin-top:20px;height:12px;background:#222;border-radius:999px;overflow:hidden}
+#progress{height:100%;width:0%;background:white}
+#downloadBtn{display:block;margin-top:20px;padding:15px;text-align:center;background:white;color:black;text-decoration:none;border-radius:12px}

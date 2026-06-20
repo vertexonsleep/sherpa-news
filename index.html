@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sherpa News</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h1>SHERPA NEWS</h1>
+<p class="subtitle">Upload Method</p>
+
+<label class="upload-box">
+<input type="file" id="videoInput" accept="video/*">
+<span>Select Video</span>
+</label>
+
+<video id="preview" controls hidden></video>
+<div id="info"></div>
+
+<button id="processBtn" disabled>Process with Sherpa Method</button>
+
+<div class="progress-wrap"><div id="progress"></div></div>
+
+<a id="downloadBtn" hidden>Download Video</a>
+</div>
+
+<script src="https://unpkg.com/@ffmpeg/ffmpeg@0.12.10/dist/ffmpeg.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
