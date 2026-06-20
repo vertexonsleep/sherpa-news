@@ -1,1 +1,0 @@
-alert('Sherpa News starter template installed. Configure FFmpeg integration before production use.');
