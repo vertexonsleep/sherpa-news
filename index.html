@@ -7,26 +7,56 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <div class="container">
-<h1>SHERPA NEWS</h1>
-<p class="subtitle">Upload Method</p>
 
-<label class="upload-box">
-<input type="file" id="videoInput" accept="video/*">
-<span>Select Video</span>
-</label>
+    <h1>SHERPA NEWS</h1>
+    <p class="subtitle">Upload Method</p>
 
-<video id="preview" controls hidden></video>
-<div id="info"></div>
+    <label class="upload-box">
+        <input type="file" id="videoInput" accept="video/*">
+        <span>Select Video</span>
+    </label>
 
-<button id="processBtn" disabled>Process with Sherpa Method</button>
+    <video id="preview" controls hidden></video>
 
-<div class="progress-wrap"><div id="progress"></div></div>
+    <div id="info"></div>
 
-<a id="downloadBtn" hidden>Download Video</a>
+    <div style="margin:15px 0;">
+        <label>
+            <input type="radio" name="sharkOpt" value="fast" checked>
+            Fast Method
+        </label>
+    </div>
+
+    <button id="processBtn">
+        Process with Sherpa Method
+    </button>
+
+    <div class="progress-wrap">
+        <div id="progress"></div>
+    </div>
+
+    <a id="downloadBtn" hidden>
+        Download Video
+    </a>
+
 </div>
 
 <script src="abcd.js"></script>
 <script src="efgh.js"></script>
+
+<script>
+const videoInput = document.getElementById("videoInput");
+const processBtn = document.getElementById("processBtn");
+
+processBtn.disabled = true;
+
+videoInput.addEventListener("change", e => {
+    window.selectedFile = e.target.files[0];
+    processBtn.disabled = !window.selectedFile;
+});
+</script>
+
 </body>
 </html>
