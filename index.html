@@ -41,11 +41,6 @@
         Download Video
     </a>
 
-</div>
-
-<script src="abcd.js"></script>
-<script src="efgh.js"></script>
-
 <script>
 const videoInput = document.getElementById("videoInput");
 const processBtn = document.getElementById("processBtn");
@@ -55,6 +50,15 @@ processBtn.disabled = true;
 videoInput.addEventListener("change", e => {
     window.selectedFile = e.target.files[0];
     processBtn.disabled = !window.selectedFile;
+});
+
+processBtn.addEventListener("click", async () => {
+    try {
+        await processSharkMethod();
+    } catch (err) {
+        console.error(err);
+        alert(err);
+    }
 });
 </script>
 
