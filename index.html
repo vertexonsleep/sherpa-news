@@ -9,7 +9,6 @@
 <body>
 
 <div class="container">
-
     <h1>SHERPA NEWS</h1>
     <p class="subtitle">Upload Method</p>
 
@@ -19,17 +18,9 @@
     </label>
 
     <video id="preview" controls hidden></video>
-
     <div id="info"></div>
 
-    <div style="margin:15px 0;">
-        <label>
-            <input type="radio" name="sharkOpt" value="fast" checked>
-            Fast Method
-        </label>
-    </div>
-
-    <button id="processBtn">
+    <button id="processBtn" disabled>
         Process with Sherpa Method
     </button>
 
@@ -40,27 +31,10 @@
     <a id="downloadBtn" hidden>
         Download Video
     </a>
+</div>
 
-<script>
-const videoInput = document.getElementById("videoInput");
-const processBtn = document.getElementById("processBtn");
-
-processBtn.disabled = true;
-
-videoInput.addEventListener("change", e => {
-    window.selectedFile = e.target.files[0];
-    processBtn.disabled = !window.selectedFile;
-});
-
-processBtn.addEventListener("click", async () => {
-    try {
-        await processSharkMethod();
-    } catch (err) {
-        console.error(err);
-        alert(err);
-    }
-});
-</script>
+<script src="abcd.js"></script>
+<script src="efgh.js"></script>
 
 </body>
 </html>
